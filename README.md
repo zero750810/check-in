@@ -1,1 +1,1 @@
-https://zero750810.github.io/check-in/?embedUrl=
+https://zero750810.github.io/check-in/?embedId=
