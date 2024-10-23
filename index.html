@@ -1,52 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=gb18030">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>åµŒå…¥ Google Apps Script ç¶²é </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #iframe-container {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;title&gt;¾€ÉÏˆóµ½&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>#iframe-container {</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>}</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;div class="container text-center mt-5"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;h1&gt;Ç¶Èë‘ªÓÃ³ÌÊ½&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>&lt;iframe id="iframe-container"&gt;&lt;/iframe&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>document.addEventListener("DOMContentLoaded", function() {</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>// ½âÎö URL …¢”µ</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>const urlParams = new URLSearchParams(window.location.search);</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>const embedUrl = urlParams.get('embedUrl');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>if (embedUrl) {</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; </span>// Œ¢ iframe µÄ src ÔO¶¨é‚÷ßfßMíµÄ URL</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; </span>document.getElementById("iframe-container").src = embedUrl;</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; </span>alert("›]ÓĞÌá¹©Ç¶ÈëµÄ¾WÖ·");</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; </span>}</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; </span>});</p>
-<p class="p1"><span class="Apple-converted-space">&nbsp; </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="container text-center mt-5">
+    <iframe id="iframe-container"></iframe>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // è§£æ URL åƒæ•¸
+      const urlParams = new URLSearchParams(window.location.search);
+      const embedUrl = urlParams.get('embedUrl');
+
+      if (embedUrl) {
+        // å°‡ iframe çš„ src è¨­å®šç‚ºå‚³éé€²ä¾†çš„ URL
+        document.getElementById("iframe-container").src = embedUrl;
+      } else {
+        alert("æ²’æœ‰æä¾›åµŒå…¥çš„ç¶²å€");
+      }
+    });
+  </script>
 </body>
 </html>
