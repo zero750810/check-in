@@ -1,1 +1,1 @@
-https://zero750810.github.io/check-in/?embedId=
+https://zero750810.github.io/check-in/?activityCode=
