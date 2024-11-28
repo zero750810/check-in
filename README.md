@@ -1,1 +1,1 @@
-https://zero750810.github.io/check-in/?activityCode=
+https://zero750810.github.io/check-in/index.html??activityCode=
